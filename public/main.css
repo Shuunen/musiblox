@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #2a1d73;
+  --color-2: #bd8c63;
+  --color-3: #751844;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: repeating-linear-gradient(315deg, transparent 0, var(--color-1) 75vmax, var(--color-1) 75vmax, var(--color-1) 75vmax), repeating-linear-gradient(220deg, transparent 0, var(--color-2) 75vmax, var(--color-2) 75vmax, var(--color-2) 75vmax);
+  background-color: var(--color-3);
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  text-shadow: .1rem .1rem .3rem black;
+  margin-bottom: 8rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  transform: rotate(45deg);
+  gap: .6rem;
+}
+
+.brick {
+  width: 5rem;
+  height: 5rem;
+  box-shadow: .1rem .1rem .2rem .1rem;
+  display: block;
+  background-color: rebeccapurple;
+  transition: all .3s;
+  cursor: help;
+}
+
+.brick:hover {
+  filter: hue-rotate(120deg) contrast(2);
+}

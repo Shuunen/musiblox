@@ -1,0 +1,34 @@
+{
+  "author": "Romain Racamier-Lafon <romain.racamier@gmail.com>",
+  "bugs": "https://github.com/Shuunen/musiblox/issues",
+  "description": "A musical chair game",
+  "devDependencies": {
+    "shuunen-stack": "latest",
+    "xo": "latest"
+  },
+  "files": [
+    "public"
+  ],
+  "homepage": "https://github.com/Shuunen/musiblox#readme",
+  "keywords": [
+    "musical chairs",
+    "game"
+  ],
+  "license": "GPL-3.0",
+  "name": "musiblox",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuunen/musiblox.git"
+  },
+  "scripts": {
+    "dev": "stack serve public",
+    "lint": "stack lint",
+    "postversion": "git push && git push --tags",
+    "preversion": "npm run lint",
+    "test": "stack test",
+    "test:watch": "stack test -- --watch",
+    "update": "npx npm-check-updates -u"
+  },
+  "version": "1.0.0"
+}
