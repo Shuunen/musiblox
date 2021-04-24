@@ -1,8 +1,9 @@
 # Musiblox
 
 [![Project license](https://img.shields.io/github/license/Shuunen/musiblox.svg?color=informational)](https://github.com/Shuunen/musiblox/blob/master/LICENSE)
+[![Website Up](https://img.shields.io/website/https/musiblox.netlify.app.svg)](https://musiblox.netlify.app)
 
-> A musical chair game
+> A musical chair like game
 
 ## Thanks
 
