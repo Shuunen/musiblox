@@ -30,5 +30,5 @@
     "test:watch": "stack test -- --watch",
     "update": "npx npm-check-updates -u"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }
