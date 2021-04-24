@@ -13,6 +13,7 @@
 - [Github](https://github.com) : for all their great work year after year, pushing OSS forward
 - [Joshua Empyre](https://freesound.org/people/joshuaempyre/sounds/250856/) : for music loop
 - [Kimberly Geswein](https://kimberlygeswein.com) : for the favicon font Gloria Hallelujah
+- [Netlify](https://netlify.com) : awesome company that offers free CI & hosting for OSS projects
 - [Paomedia](https://www.iconfinder.com/icons/285652/disc_vinyl_icon) : nice disc icon
 - [Shields.io](https://shields.io) : for the nice badges on top of this readme
 - [Xo](https://github.com/xojs/xo) : super tool to find & fix problems
