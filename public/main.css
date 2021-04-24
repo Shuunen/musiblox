@@ -1,31 +1,99 @@
+/* stylelint-disable rule-empty-line-before */
+
 * {
   box-sizing: border-box;
 }
 
-:root {
+html {
   --color-1: #2a1d73;
   --color-2: #bd8c63;
   --color-3: #751844;
+  --shadow: rgba(0, 0, 0, .5);
 }
 
 body {
   display: flex;
   flex-direction: column;
+  line-height: 1.2;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: repeating-linear-gradient(315deg, transparent 0, var(--color-1) 75vmax, var(--color-1) 75vmax, var(--color-1) 75vmax), repeating-linear-gradient(220deg, transparent 0, var(--color-2) 75vmax, var(--color-2) 75vmax, var(--color-2) 75vmax);
   background-color: var(--color-3);
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Gloria Hallelujah', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  opacity: 0;
+  transition: all 2s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backdrop.active {
+  opacity: 1;
+}
+
+.backdrop.active.start {
+  z-index: 40;
+  background-image: none !important;
+}
+
+.start button {
+  font-size: 3rem;
+  font-family: inherit;
+  padding: .5rem 2rem;
+  background-color: gold;
+  transform: skewX(-10deg);
+  box-shadow: .1rem .1rem 2rem gold;
+  transition: all .3s;
+  filter: sepia(1);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.start button:hover {
+  transform: skewX(0);
+  filter: sepia(0);
+}
+
+.title {
+  position: relative;
+  height: 5rem;
 }
 
 h1 {
   color: white;
   font-size: 4rem;
   text-shadow: .1rem .1rem .3rem black;
-  margin-bottom: 8rem;
+  z-index: 20;
+  position: relative;
+  margin: 0;
+}
+
+.shadow {
+  content: '';
+  opacity: .5;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  transform: skewX(-25deg) scale(1.2) rotate(-2deg);
+  z-index: 10;
 }
 
 .board {
@@ -33,18 +101,71 @@ h1 {
   grid-template-columns: repeat(5, 1fr);
   transform: rotate(45deg);
   gap: .6rem;
+  margin-top: 9rem;
+  position: relative;
 }
 
 .brick {
-  width: 5rem;
-  height: 5rem;
+  width: min(5rem, 10vw);
+  height: min(5rem, 10vw);
   box-shadow: .1rem .1rem .2rem .1rem;
   display: block;
   background-color: rebeccapurple;
   transition: all .3s;
   cursor: help;
+  z-index: 10;
 }
 
-.brick:hover {
-  filter: hue-rotate(120deg) contrast(2);
+.disc {
+  position: absolute;
+  z-index: 0;
+  width: min(30rem, 90vw);
+  height: min(30rem, 90vw);
+  top: -15rem;
+  left: -15rem;
+  animation-name: heartBeat;
+  animation-timing-function: ease-in-out;
+  animation-duration: 800ms;
+}
+
+@media screen and (max-width: 640px) {
+  .disc {
+    top: -10rem;
+    left: -10rem;
+  }
+}
+
+.disc.spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: gold !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.2);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.2);
+  }
+  70% {
+    transform: scale(1);
+  }
 }

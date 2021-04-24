@@ -5,13 +5,38 @@
   <meta charset='utf-8'>
   <title>Musiblox</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   <script src='main.js'></script>
 </head>
 
 <body>
-  <h1>Musiblox</h1>
-  <div class="board"></div>
+
+  <div class="backdrop active start">
+    <button>start</button>
+  </div>
+
+  <div class="title">
+    <h1>Musiblox</h1>
+    <div class="shadow"></div>
+  </div>
+
+  <div class="board">
+    <svg class="disc" style="color: gold;">
+      <use href="./disc.svg#disc"></use>
+    </svg>
+  </div>
+
+  <audio preload loop>
+    <source src="loop.mp3" type="audio/mpeg">
+    <p>Votre navigateur ne prend pas en charge l'audio HTML.</p>
+  </audio>
+
 </body>
 
 </html>
