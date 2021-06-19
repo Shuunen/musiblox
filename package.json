@@ -3,8 +3,7 @@
   "bugs": "https://github.com/Shuunen/musiblox/issues",
   "description": "A musical chair game",
   "devDependencies": {
-    "shuunen-stack": "latest",
-    "xo": "latest"
+    "shuunen-stack": "0.9.6"
   },
   "files": [
     "public"
@@ -26,9 +25,8 @@
     "lint": "stack lint",
     "postversion": "git push && git push --tags",
     "preversion": "npm run lint",
-    "test": "stack test",
-    "test:watch": "stack test -- --watch",
-    "update": "npx npm-check-updates -u"
+    "test": "echo no tests yet :)",
+    "update": "stack update"
   },
   "version": "2.0.0"
 }
