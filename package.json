@@ -3,7 +3,7 @@
   "bugs": "https://github.com/Shuunen/musiblox/issues",
   "description": "A musical chair game",
   "devDependencies": {
-    "shuunen-stack": "0.14.0"
+    "shuunen-stack": "0.14"
   },
   "files": [
     "public"
